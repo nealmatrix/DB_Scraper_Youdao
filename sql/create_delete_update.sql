@@ -11,8 +11,8 @@ CREATE TABLE WORDS (
 
 --UPDATE
 UPDATE WORDS
-SET word = 'stomachache'
-WHERE id = 4157 AND word = 'stomach ache';
+SET word = 'exchange'
+WHERE id = 4292 AND word = 'foreign exchange';
 
 UPDATE WORDS
 SET pron_us = '[ɪnˈtɪmədeɪt]'

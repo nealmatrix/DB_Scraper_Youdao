@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 from IPython.display import display
 import time
+import os
 
 pd.set_option('display.max_rows', 10)
 # from IPython.core.interactiveshell import InteractiveShell
@@ -12,7 +13,7 @@ pd.set_option('display.max_rows', 10)
 
 # %%
 # Parameter
-index_end_last_sat = 4160
+index_end_last_sat = 4280
 num_review = 100
 
 # %%
@@ -98,7 +99,7 @@ display(df_week)
 print("week review with COCA")
 display(df_week_COCA)
 
-
-df_week.to_csv(".//doc//week_review.csv")
-df_week_COCA.to_csv(".//doc//week_review_COCA.csv")
+filename = time.strftime("%Y-%m-%d %H.%M.%S", time.localtime())
+df_week.to_csv(os.path.join('doc', 'week_review', filename + '.csv'))
+df_week_COCA.to_csv(os.path.join('doc', 'week_review', filename + '_COCA.csv'))
 # %%
